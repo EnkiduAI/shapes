@@ -50,9 +50,9 @@ public class PointEntity {
     @Override
     public int hashCode() {
         double result = 1;
-        result = result * 31 + (x != 0 ? x : 0);
-        result = result * 31 + (y != 0 ? y : 0);
-        result = result * 31 + (z != 0 ? z : 0);
+        result = result * 31 + Double.hashCode(x);
+        result = result * 31 + Double.hashCode(y);
+        result = result * 31 + Double.hashCode(z);
         return (int) result;
 
 
